@@ -823,11 +823,11 @@ img {
     .hero { min-height: 80vh; padding-top: 120px; padding-bottom: 60px; }
     .hero-content { 
         max-width: 100%; 
-        text-align: center;
+        text-align: left;
         display: flex;
         flex-direction: column;
-        align-items: center;
-    } /* Fix width crushing on mobile and center content */
+        align-items: flex-start;
+    } /* Align to left for better mobile sturdiness */
     .hero-overlay {
         /* Vertical gradient for tall mobile screens */
         background: linear-gradient(180deg, rgba(9, 10, 15, 0.98) 0%, rgba(9, 10, 15, 0.85) 60%, rgba(9, 10, 15, 0.3) 100%);
@@ -874,10 +874,11 @@ img {
         display: none;
     }
     
-    .hero-title { font-size: 2.8rem; margin-bottom: 15px; text-align: center; }
-    .hero-subtitle { font-size: 1.1rem; margin-bottom: 30px; text-align: center; margin-left: auto; margin-right: auto; }
-    .hero-steps { flex-direction: column; align-items: center; margin-bottom: 40px; gap: 15px; width: 100%; }
-    .step { width: 100%; padding: 15px 20px; font-size: 1.1rem; } /* Larger touch targets for mobile */
+    .hero-title { font-size: 2.6rem; margin-bottom: 15px; text-align: left; line-height: 1.2; }
+    .hero-subtitle { font-size: 1.05rem; margin-bottom: 30px; text-align: left; margin-left: 0; margin-right: 0; }
+    .hero-buttons { margin-bottom: 30px; }
+    .hero-steps { flex-direction: column; align-items: flex-start; margin-bottom: 0; gap: 10px; width: 100%; }
+    .step { width: auto; padding: 10px 18px; font-size: 0.95rem; } /* Slightly smaller, cleaner steps */
     .step-arrow { display: none; }
     
     .about-grid { grid-template-columns: 1fr; }
@@ -888,11 +889,11 @@ img {
 
 @media (max-width: 576px) {
     .section-padding { padding: 30px 0; }
-    .hero-title { font-size: 2rem; margin-bottom: 10px; }
-    .hero-subtitle { font-size: 1rem; margin-bottom: 20px; }
+    .hero-title { font-size: 2.2rem; margin-bottom: 12px; text-align: left; }
+    .hero-subtitle { font-size: 1rem; margin-bottom: 25px; text-align: left; }
     .hero-badge { font-size: 0.8rem; padding: 6px 12px; }
-    .hero-buttons { flex-direction: column; width: 100%; gap: 10px; }
-    .btn-large { width: 100%; padding: 12px 20px; font-size: 1rem; }
+    .hero-buttons { flex-direction: column; width: 100%; gap: 12px; margin-bottom: 25px; }
+    .btn-large { width: 100%; padding: 14px 20px; font-size: 1rem; }
     
     .stats-grid { grid-template-columns: 1fr 1fr; gap: 15px; }
     .stat-item { padding: 10px; }
