@@ -279,7 +279,17 @@ img {
 .mobile-menu-btn {
     display: none;
     cursor: pointer;
+    font-size: 1.5rem;
     color: var(--text-main);
+    align-items: center;
+    gap: 8px;
+}
+
+.menu-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* ==========================================================================
@@ -811,7 +821,13 @@ img {
 @media (max-width: 768px) {
     .section-padding { padding: 60px 0; }
     .hero { min-height: 80vh; padding-top: 120px; padding-bottom: 60px; }
-    .hero-content { max-width: 100%; } /* Fix width crushing on mobile */
+    .hero-content { 
+        max-width: 100%; 
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    } /* Fix width crushing on mobile and center content */
     .hero-overlay {
         /* Vertical gradient for tall mobile screens */
         background: linear-gradient(180deg, rgba(9, 10, 15, 0.98) 0%, rgba(9, 10, 15, 0.85) 60%, rgba(9, 10, 15, 0.3) 100%);
@@ -849,7 +865,7 @@ img {
     }
     
     .mobile-menu-btn {
-        display: block;
+        display: flex;
         z-index: 100;
         position: relative;
     }
@@ -858,9 +874,9 @@ img {
         display: none;
     }
     
-    .hero-title { font-size: 2.8rem; margin-bottom: 15px; }
-    .hero-subtitle { font-size: 1.1rem; margin-bottom: 30px; }
-    .hero-steps { flex-direction: column; align-items: flex-start; margin-bottom: 40px; gap: 15px; }
+    .hero-title { font-size: 2.8rem; margin-bottom: 15px; text-align: center; }
+    .hero-subtitle { font-size: 1.1rem; margin-bottom: 30px; text-align: center; margin-left: auto; margin-right: auto; }
+    .hero-steps { flex-direction: column; align-items: center; margin-bottom: 40px; gap: 15px; width: 100%; }
     .step { width: 100%; padding: 15px 20px; font-size: 1.1rem; } /* Larger touch targets for mobile */
     .step-arrow { display: none; }
     
