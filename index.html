@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jolly Cabs | Premium Cab Service in Hyderabad</title>
+    <meta name="description" content="Affordable, Convenient, and Hassle-Free Car Rides Anywhere You Go in Hyderabad. Book your premium cab with Jolly Cabs today.">
+    
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i data-lucide="car-front" class="logo-icon"></i>
+                <span>Jolly Cabs</span>
+            </div>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <a href="tel:+917981232371" class="btn btn-primary cta-btn">Book Now</a>
+            
+            <div class="mobile-menu-btn" id="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="assets/images/hero_bg.png" alt="Premium Cab in City">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <div class="hero-badge">Premium Cab Service in Hyderabad</div>
+                <h1 class="hero-title">Book Your Perfect <span class="highlight">Ride</span> Today!</h1>
+                <p class="hero-subtitle">Affordable, Convenient, and Hassle-Free Car Rides Anywhere You Go</p>
+                
+                <div class="hero-steps">
+                    <div class="step">
+                        <div class="step-icon"><i data-lucide="map-pin"></i></div>
+                        <span>Choose Pickup Location</span>
+                    </div>
+                    <i data-lucide="arrow-right" class="step-arrow"></i>
+                    <div class="step">
+                        <div class="step-icon"><i data-lucide="tags"></i></div>
+                        <span>Select Best Deal</span>
+                    </div>
+                    <i data-lucide="arrow-right" class="step-arrow"></i>
+                    <div class="step">
+                        <div class="step-icon"><i data-lucide="calendar-check"></i></div>
+                        <span>Reserve Your Cab</span>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="#vehicles" class="btn btn-primary btn-large">Reserve Your Car</a>
+                    <a href="tel:+917981232371" class="btn btn-outline btn-large">
+                        <i data-lucide="phone"></i> Call Us: 7981232371
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. FEATURED VEHICLES -->
+    <section class="vehicles section-padding" id="vehicles">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Our Premium <span class="highlight">Fleet</span></h2>
+                <p class="section-subtitle">Choose from our wide range of well-maintained vehicles for your specific needs.</p>
+            </div>
+            
+            <div class="vehicle-grid">
+                <!-- Vehicle Card 1 -->
+                <div class="vehicle-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="vehicle-img-wrapper">
+                        <img src="assets/images/kia_carens.png" alt="KIA Carens" class="vehicle-img">
+                    </div>
+                    <div class="vehicle-info">
+                        <div class="vehicle-header">
+                            <h3 class="vehicle-name">KIA Carens</h3>
+                            <div class="vehicle-class">Premium MPV</div>
+                        </div>
+                        <ul class="vehicle-features">
+                            <li><i data-lucide="users"></i> 6+1 Seater</li>
+                            <li><i data-lucide="snowflake"></i> AC Available</li>
+                            <li><i data-lucide="briefcase"></i> 3 Bags</li>
+                        </ul>
+                        <a href="https://wa.me/917981232371?text=I%20want%20to%20book%20a%20KIA%20Carens" target="_blank" class="btn btn-primary btn-full">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 2 -->
+                <div class="vehicle-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="vehicle-img-wrapper">
+                        <img src="assets/images/maruti_ertiga.png" alt="Ertiga" class="vehicle-img">
+                    </div>
+                    <div class="vehicle-info">
+                        <div class="vehicle-header">
+                            <h3 class="vehicle-name">Maruti Ertiga</h3>
+                            <div class="vehicle-class">Economy MPV</div>
+                        </div>
+                        <ul class="vehicle-features">
+                            <li><i data-lucide="users"></i> 6+1 Seater</li>
+                            <li><i data-lucide="snowflake"></i> AC Available</li>
+                            <li><i data-lucide="briefcase"></i> 2 Bags</li>
+                        </ul>
+                        <a href="https://wa.me/917981232371?text=I%20want%20to%20book%20an%20Ertiga" target="_blank" class="btn btn-primary btn-full">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 3 -->
+                <div class="vehicle-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="vehicle-img-wrapper">
+                        <img src="assets/images/innova_crysta.png" alt="Innova Crysta" class="vehicle-img">
+                    </div>
+                    <div class="vehicle-info">
+                        <div class="vehicle-header">
+                            <h3 class="vehicle-name">Innova Crysta</h3>
+                            <div class="vehicle-class">Luxury MPV</div>
+                        </div>
+                        <ul class="vehicle-features">
+                            <li><i data-lucide="users"></i> 6+1 Seater</li>
+                            <li><i data-lucide="snowflake"></i> AC Available</li>
+                            <li><i data-lucide="briefcase"></i> 4 Bags</li>
+                        </ul>
+                        <a href="https://wa.me/917981232371?text=I%20want%20to%20book%20an%20Innova%20Crysta" target="_blank" class="btn btn-primary btn-full">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 4 -->
+                <div class="vehicle-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="vehicle-img-wrapper">
+                        <img src="assets/images/tata_safari.png" alt="Tata Safari" class="vehicle-img">
+                    </div>
+                    <div class="vehicle-info">
+                        <div class="vehicle-header">
+                            <h3 class="vehicle-name">Tata Safari</h3>
+                            <div class="vehicle-class">Premium SUV</div>
+                        </div>
+                        <ul class="vehicle-features">
+                            <li><i data-lucide="users"></i> 5+1 Seater</li>
+                            <li><i data-lucide="snowflake"></i> AC Available</li>
+                            <li><i data-lucide="briefcase"></i> 3 Bags</li>
+                        </ul>
+                        <a href="https://wa.me/917981232371?text=I%20want%20to%20book%20a%20Tata%20Safari" target="_blank" class="btn btn-primary btn-full">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 5 -->
+                <div class="vehicle-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="vehicle-img-wrapper">
+                        <img src="assets/images/swift_dzire.png" alt="Swift Dzire" class="vehicle-img">
+                    </div>
+                    <div class="vehicle-info">
+                        <div class="vehicle-header">
+                            <h3 class="vehicle-name">Swift Dzire</h3>
+                            <div class="vehicle-class">Sedan</div>
+                        </div>
+                        <ul class="vehicle-features">
+                            <li><i data-lucide="users"></i> 4+1 Seater</li>
+                            <li><i data-lucide="snowflake"></i> AC Available</li>
+                            <li><i data-lucide="briefcase"></i> 2 Bags</li>
+                        </ul>
+                        <a href="https://wa.me/917981232371?text=I%20want%20to%20book%20a%20Swift%20Dzire" target="_blank" class="btn btn-primary btn-full">Book Now</a>
+                    </div>
+                </div>
+
+                <!-- Vehicle Card 6 -->
+                <div class="vehicle-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="vehicle-img-wrapper">
+                        <!-- Real Mahindra XUV300 Image -->
+                        <img src="assets/images/mahindra_xuv300.jpg" alt="Mahindra XUV300" class="vehicle-img" style="object-fit: cover;">
+                    </div>
+                    <div class="vehicle-info">
+                        <div class="vehicle-header">
+                            <h3 class="vehicle-name">Mahindra XUV300</h3>
+                            <div class="vehicle-class">Compact SUV</div>
+                        </div>
+                        <ul class="vehicle-features">
+                            <li><i data-lucide="users"></i> 4+1 Seater</li>
+                            <li><i data-lucide="snowflake"></i> AC Available</li>
+                            <li><i data-lucide="briefcase"></i> 2 Bags</li>
+                        </ul>
+                        <a href="https://wa.me/917981232371?text=I%20want%20to%20book%20a%20Mahindra%20XUV300" target="_blank" class="btn btn-primary btn-full">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ABOUT US -->
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img-wrapper" data-aos="fade-right">
+                    <div class="about-img-bg"></div>
+                    <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&q=80&w=800" alt="About Jolly Cabs" class="about-img">
+                    <div class="experience-badge">
+                        <span class="exp-number">10+</span>
+                        <span class="exp-text">Years of<br>Experience</span>
+                    </div>
+                </div>
+                
+                <div class="about-content" data-aos="fade-left">
+                    <h2 class="section-title">Welcome to <span class="highlight">Jolly Cabs</span></h2>
+                    <p class="about-desc">
+                        We provide reliable, affordable, and comfortable cab services for business, leisure, and special occasions. Our fleet includes economy, SUV, and luxury vehicles — all well-maintained and modern.
+                    </p>
+                    <p class="about-desc">
+                        Based in Kukatpally, Hyderabad, we pride ourselves on exceptional customer service and punctuality, ensuring you reach your destination safely and on time.
+                    </p>
+                    
+                    <ul class="about-list">
+                        <li><i data-lucide="check-circle-2" class="highlight-icon"></i> 24/7 Availability</li>
+                        <li><i data-lucide="check-circle-2" class="highlight-icon"></i> Professional Chauffeurs</li>
+                        <li><i data-lucide="check-circle-2" class="highlight-icon"></i> Well-Maintained Fleet</li>
+                    </ul>
+                    
+                    <a href="tel:+917981232371" class="btn btn-primary">
+                        <i data-lucide="phone-call"></i> Call Us Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SERVICES -->
+    <section class="services section-padding" id="services">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Our <span class="highlight">Services</span></h2>
+                <p class="section-subtitle">Tailored transportation solutions to meet all your travel needs.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="service-icon-wrapper">
+                        <i data-lucide="heart-handshake"></i>
+                    </div>
+                    <h3 class="service-title">Wedding & Event Cabs</h3>
+                    <p class="service-desc">Luxury decorated vehicles with formal chauffeurs for your special day.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="service-icon-wrapper">
+                        <i data-lucide="camera"></i>
+                    </div>
+                    <h3 class="service-title">Tourist Cabs</h3>
+                    <p class="service-desc">Guided city and destination tours with knowledgeable drivers.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="service-icon-wrapper">
+                        <i data-lucide="plane-takeoff"></i>
+                    </div>
+                    <h3 class="service-title">Airport Transfer</h3>
+                    <p class="service-desc">On-time pickup/drop with ample luggage space for hassle-free travel.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="service-icon-wrapper">
+                        <i data-lucide="building-2"></i>
+                    </div>
+                    <h3 class="service-title">Corporate Travel</h3>
+                    <p class="service-desc">Business packages with luxury vehicles for executives and employees.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. STATS COUNTER -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number" data-target="10">0</div>
+                    <div class="stat-label">Years Experienced</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number" data-target="22">0</div>
+                    <div class="stat-label">Total Cars</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-number" data-target="5000">0</div>
+                    <div class="stat-number-suffix">+</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-number" data-target="5">0</div>
+                    <div class="stat-label">Total Branches</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CONTACT / FOOTER -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                    <div class="footer-logo">
+                        <i data-lucide="car-front" class="logo-icon"></i>
+                        <span>Jolly Cabs</span>
+                    </div>
+                    <p class="footer-desc">
+                        Affordable, Convenient, and Hassle-Free Car Rides Anywhere You Go. Experience the best ride in Hyderabad.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#vehicles">Our Fleet</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i data-lucide="map-pin"></i>
+                            <span>Kukatpally, Hyderabad - 500072</span>
+                        </li>
+                        <li>
+                            <i data-lucide="phone"></i>
+                            <a href="tel:+917981232371">+91 7981232371</a>
+                        </li>
+                        <li>
+                            <i data-lucide="mail"></i>
+                            <a href="mailto:Info@jollycabs.in">Info@jollycabs.in</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jolly Cabs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
