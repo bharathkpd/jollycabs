@@ -765,6 +765,11 @@ img {
 @media (max-width: 768px) {
     .section-padding { padding: 60px 0; }
     .hero { min-height: 80vh; padding-top: 120px; padding-bottom: 60px; }
+    .hero-content { max-width: 100%; } /* Fix width crushing on mobile */
+    .hero-overlay {
+        /* Vertical gradient for tall mobile screens */
+        background: linear-gradient(180deg, rgba(9, 10, 15, 0.98) 0%, rgba(9, 10, 15, 0.85) 60%, rgba(9, 10, 15, 0.3) 100%);
+    }
     .stats { padding: 50px 0; }
     .footer { padding: 50px 0 20px; }
 
@@ -809,8 +814,8 @@ img {
     
     .hero-title { font-size: 2.8rem; margin-bottom: 15px; }
     .hero-subtitle { font-size: 1.1rem; margin-bottom: 30px; }
-    .hero-steps { flex-direction: column; align-items: flex-start; margin-bottom: 40px; gap: 12px; }
-    .step { width: 100%; }
+    .hero-steps { flex-direction: column; align-items: flex-start; margin-bottom: 40px; gap: 15px; }
+    .step { width: 100%; padding: 15px 20px; font-size: 1.1rem; } /* Larger touch targets for mobile */
     .step-arrow { display: none; }
     
     .about-grid { grid-template-columns: 1fr; }
@@ -838,11 +843,12 @@ img {
     .section-title { font-size: 1.8rem; margin-bottom: 10px; }
     .section-subtitle { font-size: 0.95rem; }
     
-    .vehicle-grid { grid-template-columns: 1fr; gap: 20px; }
-    .vehicle-img-wrapper { height: 240px; } /* Increased from 180px */
-    .vehicle-info { padding: 15px; }
-    .vehicle-name { font-size: 1.2rem; }
-    .vehicle-features { gap: 10px; margin-bottom: 15px; font-size: 0.85rem; }
+    .vehicle-grid { grid-template-columns: 1fr; gap: 25px; }
+    .vehicle-img-wrapper { height: 200px; } /* Perfect proportion for mobile */
+    .vehicle-info { padding: 20px; }
+    .vehicle-name { font-size: 1.4rem; }
+    .vehicle-features { gap: 10px; margin-bottom: 20px; font-size: 1rem; }
+    .btn-full { padding: 14px; font-size: 1.1rem; } /* Touch-friendly booking button */
     
     .about-img { box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
     .experience-badge { padding: 15px; transform: scale(0.8); right: -10px; bottom: -10px; }
