@@ -383,29 +383,44 @@ img {
 .hero-steps {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 30px;
     margin-bottom: 50px;
-    flex-wrap: wrap;
+    position: relative;
 }
 
 .step {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     background: rgba(255, 255, 255, 0.03);
-    padding: 12px 24px;
-    border-radius: 50px;
+    padding: 14px 28px;
+    border-radius: 100px;
     border: 1px solid rgba(250, 204, 21, 0.15);
     backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: var(--primary-color);
+    color: #000;
+    font-size: 0.8rem;
+    font-weight: 800;
+    border-radius: 50%;
+    margin-right: -5px;
 }
 
 .step:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
     background: rgba(250, 204, 21, 0.1);
     border-color: rgba(250, 204, 21, 0.5);
-    box-shadow: 0 8px 25px rgba(250, 204, 21, 0.2);
+    box-shadow: 0 12px 30px rgba(250, 204, 21, 0.2);
 }
 
 .step-icon {
@@ -956,8 +971,28 @@ img {
     .hero-title { font-size: 2.6rem; margin-bottom: 15px; text-align: left; line-height: 1.2; }
     .hero-subtitle { font-size: 1.05rem; margin-bottom: 30px; text-align: left; margin-left: 0; margin-right: 0; }
     .hero-buttons { margin-bottom: 30px; }
-    .hero-steps { flex-direction: column; align-items: flex-start; margin-bottom: 0; gap: 10px; width: 100%; }
-    .step { width: auto; padding: 10px 18px; font-size: 0.95rem; } /* Slightly smaller, cleaner steps */
+    .hero-steps { 
+        flex-direction: column; 
+        align-items: flex-start; 
+        margin-bottom: 0; 
+        gap: 20px; 
+        width: 100%;
+        padding-left: 20px;
+        border-left: 2px dashed rgba(250, 204, 21, 0.2); /* Vertical timeline line */
+        margin-left: 10px;
+    }
+    .step { 
+        width: auto; 
+        padding: 12px 20px; 
+        font-size: 0.95rem; 
+        border-radius: 12px; /* Less rounded for mobile sturdiness */
+    }
+    .step-number {
+        position: absolute;
+        left: -32px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
     .step-arrow { display: none; }
     
     .about-grid { grid-template-columns: 1fr; gap: 30px; }
@@ -974,6 +1009,8 @@ img {
     .hero-subtitle { font-size: 1rem; margin-bottom: 25px; text-align: left; }
     .hero-badge { font-size: 0.8rem; padding: 6px 12px; }
     .hero-buttons { flex-direction: column; width: 100%; gap: 12px; margin-bottom: 25px; }
+    .hero-steps { padding-left: 15px; margin-left: 5px; gap: 15px; }
+    .step-number { left: -27px; }
     .btn-large { width: 100%; padding: 14px 20px; font-size: 1rem; }
     
     .stats-grid { grid-template-columns: 1fr 1fr; gap: 15px; width: 100%; }
@@ -1006,6 +1043,8 @@ img {
     /* Pixel-perfect tuning for very small devices like iPhone SE (320px) */
     .hero-title { font-size: 1.7rem; line-height: 1.2; }
     .hero-subtitle { font-size: 0.9rem; }
+    .hero-steps { padding-left: 10px; margin-left: 2px; gap: 10px; }
+    .step-number { left: -22px; width: 20px; height: 20px; font-size: 0.7rem; }
     .btn { padding: 10px 20px; font-size: 0.95rem; }
     .btn-large { padding: 10px 15px; font-size: 0.9rem; }
     
