@@ -99,7 +99,19 @@ img {
 }
 
 .highlight {
+    background: linear-gradient(to right, var(--primary-color), #fffbeb, var(--primary-color));
+    background-size: 200% auto;
     color: var(--primary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
 }
 
 .text-center {
@@ -152,10 +164,28 @@ img {
     color: #000;
 }
 
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent);
+    transform: skewX(-25deg);
+    animation: sweep-shine 4s infinite;
+}
+
+@keyframes sweep-shine {
+    0% { left: -100%; }
+    20% { left: 200%; }
+    100% { left: 200%; }
+}
+
 .btn-primary:hover {
     background: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(250, 204, 21, 0.2);
+    box-shadow: 0 10px 20px rgba(250, 204, 21, 0.3);
 }
 
 .btn-outline {
@@ -304,6 +334,13 @@ img {
     margin-bottom: 20px;
     letter-spacing: 1px;
     text-transform: uppercase;
+    animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+    0% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(250, 204, 21, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0); }
 }
 
 .hero-title {
@@ -332,11 +369,20 @@ img {
     display: flex;
     align-items: center;
     gap: 10px;
-    background: var(--glass-bg);
-    padding: 12px 20px;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.03);
+    padding: 12px 24px;
+    border-radius: 50px;
+    border: 1px solid rgba(250, 204, 21, 0.15);
     backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.step:hover {
+    transform: translateY(-4px);
+    background: rgba(250, 204, 21, 0.1);
+    border-color: rgba(250, 204, 21, 0.5);
+    box-shadow: 0 8px 25px rgba(250, 204, 21, 0.2);
 }
 
 .step-icon {
