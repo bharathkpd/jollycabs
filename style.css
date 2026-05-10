@@ -938,22 +938,22 @@ img {
     }
 
     .hero {
-        min-height: 80vh;
-        padding-top: 120px;
-        padding-bottom: 60px;
+        min-height: 100vh;
+        min-height: 100dvh;
+        padding-top: 80px;
+        padding-bottom: 40px;
+        justify-content: center;
     }
 
     .hero-content {
         max-width: 100%;
-        text-align: left;
+        text-align: center;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
-    /* Align to left for better mobile sturdiness */
     .hero-overlay {
-        /* Vertical gradient for tall mobile screens */
         background: linear-gradient(180deg, rgba(9, 10, 15, 0.98) 0%, rgba(9, 10, 15, 0.85) 60%, rgba(9, 10, 15, 0.3) 100%);
     }
 
@@ -983,7 +983,6 @@ img {
         z-index: 2000;
         box-shadow: -15px 0 40px rgba(0, 0, 0, 0.8);
         transform: translateX(100%);
-        /* Use transform instead of right for better performance and no overflow */
     }
 
     .nav-links.active {
@@ -1037,33 +1036,13 @@ img {
         opacity: 1;
     }
 
-    .nav-links.active li:nth-child(1) {
-        transition-delay: 0.1s;
-    }
-
-    .nav-links.active li:nth-child(2) {
-        transition-delay: 0.2s;
-    }
-
-    .nav-links.active li:nth-child(3) {
-        transition-delay: 0.3s;
-    }
-
-    .nav-links.active li:nth-child(4) {
-        transition-delay: 0.4s;
-    }
-
-    .nav-links.active li:nth-child(5) {
-        transition-delay: 0.5s;
-    }
-
-    .nav-links.active li:nth-child(6) {
-        transition-delay: 0.6s;
-    }
-
-    .nav-links.active li:nth-child(7) {
-        transition-delay: 0.7s;
-    }
+    .nav-links.active li:nth-child(1) { transition-delay: 0.1s; }
+    .nav-links.active li:nth-child(2) { transition-delay: 0.2s; }
+    .nav-links.active li:nth-child(3) { transition-delay: 0.3s; }
+    .nav-links.active li:nth-child(4) { transition-delay: 0.4s; }
+    .nav-links.active li:nth-child(5) { transition-delay: 0.5s; }
+    .nav-links.active li:nth-child(6) { transition-delay: 0.6s; }
+    .nav-links.active li:nth-child(7) { transition-delay: 0.7s; }
 
     .nav-link {
         font-size: 1.25rem;
@@ -1092,34 +1071,27 @@ img {
     }
 
     .hero-title {
-        font-size: 2.6rem;
+        font-size: 2.8rem;
         margin-bottom: 15px;
-        text-align: left;
+        text-align: center;
         line-height: 1.2;
     }
 
     .hero-subtitle {
-        font-size: 1.05rem;
+        font-size: 1.1rem;
         margin-bottom: 30px;
-        text-align: left;
-        margin-left: 0;
-        margin-right: 0;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .hero-buttons {
         margin-bottom: 30px;
+        justify-content: center;
     }
 
-    .hero-steps {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-bottom: 0;
-        gap: 20px;
-        width: 100%;
-        padding-left: 20px;
-        border-left: 2px dashed rgba(250, 204, 21, 0.2);
-        /* Vertical timeline line */
-        margin-left: 10px;
+    .hero-badge {
+        margin: 0 auto 20px auto;
     }
 
     .step {
@@ -1176,33 +1148,40 @@ img {
     }
 
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 2.3rem;
         margin-bottom: 12px;
-        text-align: left;
+        text-align: center;
+        line-height: 1.15;
     }
 
     .hero-subtitle {
         font-size: 1rem;
         margin-bottom: 25px;
-        text-align: left;
+        text-align: center;
+        padding: 0 10px;
     }
 
     .hero-badge {
-        font-size: 0.8rem;
-        padding: 6px 12px;
+        font-size: 0.75rem;
+        padding: 6px 14px;
+        margin: 0 auto 15px auto;
+        letter-spacing: 0.5px;
+        text-align: center;
     }
 
     .hero-buttons {
         flex-direction: column;
         width: 100%;
+        max-width: 320px;
+        margin: 0 auto 25px auto;
         gap: 12px;
-        margin-bottom: 25px;
+        align-items: stretch;
     }
 
     .btn-large {
         width: 100%;
-        padding: 14px 20px;
-        font-size: 1rem;
+        padding: 15px 20px;
+        font-size: 1.05rem;
     }
 
     .steps-grid {
