@@ -875,7 +875,21 @@ img {
     .mobile-nav-header {
         display: flex;
         width: 100%;
+        justify-content: space-between;
+        align-items: center;
         margin-bottom: 40px !important;
+    }
+
+    .close-menu {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
+        color: var(--text-main);
+        cursor: pointer;
     }
     
     .mobile-nav-footer {
