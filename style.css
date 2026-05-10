@@ -391,59 +391,85 @@ img {
     line-height: 1.5;
 }
 
-.hero-steps {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 20px;
-    margin-bottom: 50px;
+/* ==========================================================================
+   HOW IT WORKS
+   ========================================================================== */
+.how-it-works {
+    background: linear-gradient(180deg, var(--bg-dark) 0%, #0d0f14 100%);
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.step-card {
+    background: var(--bg-card);
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: var(--transition-normal);
     position: relative;
-    flex-wrap: wrap;
+    overflow: hidden;
 }
 
-.step {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 18px 32px; /* Slightly larger on desktop */
-    border-radius: 100px;
-    border: 1px solid rgba(250, 204, 21, 0.2);
-    backdrop-filter: blur(15px);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+.step-card:hover {
+    transform: translateY(-10px);
+    background: var(--bg-card-hover);
+    border-color: rgba(250, 204, 21, 0.3);
 }
 
-.step-number {
+.step-icon-box {
+    width: 80px;
+    height: 80px;
+    background: rgba(250, 204, 21, 0.1);
+    color: var(--primary-color);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 24px;
-    height: 24px;
+    margin: 0 auto 25px;
+    position: relative;
+}
+
+.step-icon-box i {
+    width: 35px;
+    height: 35px;
+}
+
+.step-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
     background: var(--primary-color);
     color: #000;
-    font-size: 0.8rem;
-    font-weight: 800;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    margin-right: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 10px rgba(250, 204, 21, 0.3);
 }
 
-.step:hover {
-    transform: translateY(-5px);
-    background: rgba(250, 204, 21, 0.1);
-    border-color: rgba(250, 204, 21, 0.5);
-    box-shadow: 0 12px 30px rgba(250, 204, 21, 0.2);
+.step-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--text-main);
 }
 
-.step-icon {
-    color: var(--primary-color);
+.step-card p {
+    color: var(--text-muted);
+    line-height: 1.6;
 }
 
 .step-arrow {
-    color: var(--text-muted);
-    width: 20px;
-    height: 20px;
+    display: none;
 }
 
 .hero-buttons {
@@ -1022,9 +1048,14 @@ img {
     .hero-subtitle { font-size: 1rem; margin-bottom: 25px; text-align: left; }
     .hero-badge { font-size: 0.8rem; padding: 6px 12px; }
     .hero-buttons { flex-direction: column; width: 100%; gap: 12px; margin-bottom: 25px; }
-    .hero-steps { padding-left: 15px; margin-left: 5px; gap: 15px; }
-    .step-number { left: -27px; }
     .btn-large { width: 100%; padding: 14px 20px; font-size: 1rem; }
+    
+    .steps-grid { grid-template-columns: 1fr; gap: 20px; }
+    .step-card { padding: 30px 20px; text-align: left; display: flex; align-items: center; gap: 20px; }
+    .step-icon-box { margin: 0; width: 60px; height: 60px; flex-shrink: 0; }
+    .step-icon-box i { width: 25px; height: 25px; }
+    .step-card h3 { font-size: 1.2rem; margin-bottom: 5px; }
+    .step-card p { font-size: 0.9rem; }
     
     .stats-grid { grid-template-columns: 1fr 1fr; gap: 15px; width: 100%; }
     .stat-item { padding: 15px 10px; border: 1px solid var(--border-color); border-radius: 12px; }
@@ -1054,10 +1085,11 @@ img {
 
 @media (max-width: 380px) {
     /* Pixel-perfect tuning for very small devices like iPhone SE (320px) */
-    .hero-title { font-size: 1.7rem; line-height: 1.2; }
-    .hero-subtitle { font-size: 0.9rem; }
-    .hero-steps { padding-left: 10px; margin-left: 2px; gap: 10px; }
-    .step-number { left: -22px; width: 20px; height: 20px; font-size: 0.7rem; }
+    .hero-buttons { flex-direction: column; width: 100%; gap: 10px; }
+    .step-card { padding: 20px 15px; gap: 15px; }
+    .step-icon-box { width: 50px; height: 50px; }
+    .step-icon-box i { width: 20px; height: 20px; }
+    .step-card h3 { font-size: 1.1rem; }
     .btn { padding: 10px 20px; font-size: 0.95rem; }
     .btn-large { padding: 10px 15px; font-size: 0.9rem; }
     
